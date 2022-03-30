@@ -1,0 +1,6 @@
+node_modules
+lib/*.js
+!*.d.ts
+.venv
+.pytest_cache
+cdk.out
