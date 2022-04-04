@@ -1,5 +1,6 @@
 node_modules
 lib/*.js
+test/*.js
 !*.d.ts
 .venv
 .pytest_cache
