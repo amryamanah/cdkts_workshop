@@ -25,7 +25,9 @@ export class WorkshopPipelineStack extends cdk.Stack {
                         "pip install -r requirements.txt",
                     ],
                     commands: [
-                        "npx cdk synth",
+                        'npm ci',
+                        'npm run build',
+                        'npx cdk synth',
                     ]
                 })
             }
