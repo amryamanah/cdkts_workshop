@@ -23,6 +23,7 @@ export class WorkshopPipelineStack extends cdk.Stack {
                     commands: [
                         'npm install -g aws-cdk',
                         "pip install -r requirements.txt",
+                        "npm install",
                         'npx cdk synth',
                     ]
                 })
