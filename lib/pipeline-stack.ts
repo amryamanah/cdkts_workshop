@@ -13,18 +13,19 @@ export class WorkshopPipelineStack extends cdk.Stack {
             this, "CdktsWorkshopPipeline", 
             {
                 pipelineName: "CdktsWorkshopPipeline",
-                synth: new ShellStep('SynthStep', {
+                synth: new CodeBuildStep('SynthStep', {
                     input: CodePipelineSource.connection(
                         'amryamanah/cdkts_workshop',
                         'main', {
                             connectionArn: "arn:aws:codestar-connections:ap-southeast-1:710948242070:connection/36f425b8-1a44-4a27-87b1-a96c2558c0ff"
                         }
                     ),
-                    commands: [
+                    installCommands: [
                         'npm install -g aws-cdk',
-                        "pip install -r requirements.txt",
-                        "npm install",
-                        'npx cdk synth',
+                    ],
+                    commands: [
+                        "npm ci",
+                        "npx cdk synth",
                     ]
                 })
             }
