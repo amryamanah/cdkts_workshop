@@ -18,7 +18,7 @@ export class WorkshopPipelineStack extends cdk.Stack {
                     input: CodePipelineSource.connection(
                         'amryamanah/cdkts_workshop',
                         'main', {
-                            connectionArn: "arn:aws:codestar-connections:ap-southeast-1:376288083010:connection/a3d09f69-d8f8-4e39-b1c0-12878a88e275"
+                            connectionArn: "arn:aws:codestar-connections:ap-southeast-1:710948242070:connection/20539e03-801c-4e6d-b00d-70fa6e92475f"
                         }
                     ),
                     installCommands: [
