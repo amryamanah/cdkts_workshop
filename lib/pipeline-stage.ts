@@ -6,6 +6,7 @@ import { Construct } from "constructs";
 export class WorkshopPipelineStage extends Stage {
     constructor(scope: Construct, id: string, props?: StageProps) {
         super(scope, id, props);
+        console.log("Pipeline stage");
 
         new CdktsWorkshopStack(this, 'Webservice');
     }
